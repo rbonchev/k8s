@@ -19,6 +19,19 @@ spec:
         image: prom/prometheus:v2.44.0
         ports:
         - containerPort: 9090
+        volumeMounts:
+              - name: prometheus-config-volume
+                mountPath: /etc/prometheus/
+              - name: prometheus-storage-volume
+                mountPath: /prometheus/
+      volumes:
+        - name: prometheus-config-volume
+          configMap:
+            defaultMode: 420
+            name: prometheus-server-conf
+  
+        - name: prometheus-storage-volume
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
