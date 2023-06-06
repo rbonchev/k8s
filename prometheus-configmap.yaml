@@ -12,9 +12,9 @@ data:
       scrape_configs:
       - job_name: node-exporter
         static_configs:
-        - targets: ['10.0.16.58:30100']
-        - targets: ['10.0.16.36:30100']
-        - targets: ['10.0.16.60:30100']
+        - targets: ['node1-test-fsc.scalefocus.dev:30100']
+        - targets: ['node2-test-fsc.scalefocus.dev:30100']
+        - targets: ['node3-test-fsc.scalefocus.dev:30100']
       - job_name: prometheus
         static_configs:
         - targets: ['localhost:9090']
