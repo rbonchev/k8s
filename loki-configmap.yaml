@@ -5,6 +5,7 @@ metadata:
 data:
   loki.yaml: |
     auth_enabled: false
+<<<<<<< HEAD
     schema_config:
       configs:
         - from: 2023-01-01
@@ -20,3 +21,5 @@ data:
 
       filesystem:
         directory: /data/loki/chunks
+=======
+>>>>>>> 1446bdbba8e6c815032ce187d110549d3a5af916
