@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: loki-config
 data:
-  loki.yaml: |
+  loki-config.yaml: |
     auth_enabled: false
 
     server:
@@ -31,7 +31,7 @@ data:
 
     schema_config:
       configs:
-        - from: 2020-10-24
+        - from: 2023-01-01
           store: boltdb-shipper
           object_store: filesystem
           schema: v11
